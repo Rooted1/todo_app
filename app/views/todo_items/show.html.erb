@@ -2,4 +2,8 @@
 
 <p><%=@todo_item.description%></p>
 <h3>Category: </h3><%=@todo_item.category.name%><br>
-<h3>Due Day: </h3><%=@todo_item.day.name%>
+<h3>Due Day: </h3><%=@todo_item.day.name%><br><br>
+
+<%=form_for @todo_item do |f|%>
+  <%= f.submit("Update Todo")%>
+<%end%>

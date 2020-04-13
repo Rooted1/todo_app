@@ -1,0 +1,8 @@
+<h1>Create A Day</h1>
+
+<%= form_for @day do |f| %>
+  <%=f.label "Day"%>
+  <%=f.text_field :name%>
+
+  <%=f.submit%>
+<%end%>

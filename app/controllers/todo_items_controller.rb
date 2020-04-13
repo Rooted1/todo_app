@@ -5,8 +5,8 @@ class TodoItemsController < ApplicationController
 
   def new
     @todo_item = TodoItem.new
-    @category = Category.all
-    @day = Day.all
+    @categories = Category.all
+    @days = Day.all
   end
 
   def create

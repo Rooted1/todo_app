@@ -1,0 +1,18 @@
+<h1>Create A Todo</h1>
+
+<%= form_for @todo_item do |f|%>
+  <%=f.label "Title"%><br>
+  <%=f.text_field :title%><br>
+
+  <%=f.label "Description"%><br>
+  <%=f.text_area :description%><br>
+
+  <%=f.label "Category"%><br>
+  <%=f.collection_select :category_id, @categories, :id, :name%><br>
+
+  <%=f.label "Day"%><br>
+  <%=f.collection_select :day_id, @days, :id, :name%><br>
+
+  <%=f.submit %>
+
+<%end%>

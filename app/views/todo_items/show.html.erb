@@ -1,9 +1,10 @@
 <h1><%=@todo_item.title%></h1>
+<hr>
 
 <p><%=@todo_item.description%></p>
 <h3>Category: </h3><%=@todo_item.category.name%><br>
 <h3>Due Day: </h3><%=@todo_item.day.name%><br><br>
 
-<%=form_for @todo_item do |f|%>
-  <%= f.submit("Update Todo")%>
-<%end%>
+<button><%= link_to 'Edit', edit_todo_item_path(@todo_item) %></button><br><br>
+
+<button><%= link_to '<-- Go Back', todo_items_path(@todo_items) %></button><br><br>

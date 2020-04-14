@@ -16,7 +16,7 @@ class DaysController < ApplicationController
   end
 
   def update
-    @day = Day.update(day_params)
+    # @day = Day.update(day_params)
   end
 
   def show

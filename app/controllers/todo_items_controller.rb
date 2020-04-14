@@ -16,20 +16,22 @@ class TodoItemsController < ApplicationController
 
   def edit
     @todo_item = TodoItem.find(params[:id])
+    @categories = Category.all
+    @days = Day.all
   end
 
   def update
-    @todo_item = TodoItem.update(todo_item_params)
+    @todo_item = TodoItem.find(params[:id])
+    @todo_item.update(todo_item_params)
     redirect_to todo_item_path(@todo_item)
   end
 
   def show
     @todo_item = TodoItem.find(params[:id])
+    @todo_items = TodoItem.all
   end
 
-  def destroy
-    @todo_item = TodoItem.find(params[:id])
-  end
+  
 
   private
 

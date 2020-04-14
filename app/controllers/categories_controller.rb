@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Category.update(category_params)
+    # @category = Category.update(category_params)
   end
 
   def show

@@ -1,4 +1,5 @@
 class TodoItemsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @todo_items = TodoItem.all
   end
@@ -31,7 +32,12 @@ class TodoItemsController < ApplicationController
     @todo_items = TodoItem.all
   end
 
-  
+  def destroy
+    @todo_items = TodoItem.all
+    @todo_item = TodoItem.find(params[:id])
+    @todo_item.destroy
+    redirect_to todo_items_path(@todo_items)
+  end
 
   private
 

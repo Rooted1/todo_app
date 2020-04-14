@@ -3,3 +3,4 @@
     <li><%= link_to todo_item.title, todo_item_path(todo_item)%></li>
   <%end%>
 </ul>
+<button><%=link_to '+ Create New Todo', new_todo_item_path(@todo_items)%></button>
